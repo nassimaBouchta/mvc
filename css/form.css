@@ -1,0 +1,73 @@
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+font-family: 'Dayrom';
+}
+
+
+
+form{
+	margin:50px 150px;
+
+}
+fieldset{
+	border-style: dotted;
+	background: white;
+	border-color:#82ccdd;
+	width:780px;
+	margin:auto;
+}
+fieldset legend{
+	
+	padding-top:25px;
+	font-family: 'Dayrom';
+
+}
+
+.cls1{
+	width:130px;
+	float:left;
+
+}
+.cls1 label{
+	margin-top: 19px; 
+	display: block;
+	font-size: 14px;
+}
+}
+.cls1 input
+{ margin-top: 10px; display: block; }
+/*:required{
+  background-color: yellow;
+}*/
+.cls2{
+	
+	float:right;
+}
+fieldset section{
+	 display:table;
+}
+

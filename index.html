@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>
+		formulaire inscription
+	</title>
+	<link rel="stylesheet" href="css/form.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+<form name="testForm" id="testForm" method="post" action="controller/userController.php?action=insert">
+	<fieldset>
+		<legend>.:: Gestion de profil ::.</legend>
+		<p>
+			<label>
+				<input type="radio" name="visibility" value="1" checked> Visible pour tous</label>
+			<label>
+				<input type="radio" name="visibility" value="2"> Visible pour les amis</label>
+			<label>
+				<input type="radio" name="visibility" value="3"> Invisible</label>
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>.:: Vos coordonées ::.</legend>
+		<section>
+			<div class="cls1">
+				<label>Pseudo:</label>
+				<label>Site web :</label>
+				<label>Telephone :</label>
+				<label>E-mail :</label>
+				<label for="pw">Mot de passe :</label>
+
+				<label>Date de naissance :</label>
+				<label>Présentation :</label>
+			</div>
+			<div class="cls2">
+				<p>
+					<input type="text" name="name" required autofocus placeholder="Vos nom et prénom">
+				</p>
+				<p>
+					<input type="url" name="site" placeholder="adresse de votre site web">
+				</p>
+				<p>
+					<input type="tel" name="telephone" required placeholder="Votre numéro de téléphone">
+				</p>
+				<p>
+					<input type="email" name="email" required placeholder="Votre adresse mail">
+				</p>
+				<p>
+					<input type="password" id="pw" name="password" required placeholder="m2p">
+				</p>
+				<p>
+					<input type="date" name="birthdate">
+				</p>
+				<p>
+					<textarea placeholder="votre présentation" rows="8" cols="42" name="description"></textarea>
+				</p>
+			</div>
+		</section>
+		<input type="submit" value="Valider">
+		<input type="reset" value="Réinitialiser">
+
+	</fieldset>
+
+</form>
