@@ -48,7 +48,7 @@
                     console.log(xhr.responseText);
                 }
             };
-            xhr.open('POST', '../Controller/messageController.php?action=send', true);
+            xhr.open('POST', '../Controller/msgcontroller.php?action=send', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.send("message="+message.value);
             loadMessage();
@@ -64,7 +64,7 @@
                     console.log(xhr.responseText);
                 }  
              }
-            xhr.open('GET', '../Controller/messageController.php?action=messages', true);
+            xhr.open('GET', '../controller/msgcontroller.php?action=messages', true);
             xhr.send();
         }
     </script>
