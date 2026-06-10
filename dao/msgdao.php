@@ -1,5 +1,5 @@
 <?php
-include '../Model/message.php';
+include '../model/msg.php';
 
 class messageDOA{
     private $con;

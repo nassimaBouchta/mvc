@@ -9,7 +9,8 @@ $doa = new messageDOA();
 switch($action){
     case "send":
         $msg = $_POST['message'];
-        $message = new message(0, $msg , $_SESSION['user']->getEmail(), getdate());
+       if (!isset($_SESSION['user'])) { http_response_code(403); exit; }
+        $message = new message(0, $msg, $_SESSION['user']->getEmail(), null);
         $doa->saveMessage($message);
         break;
 

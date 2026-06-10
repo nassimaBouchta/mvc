@@ -28,7 +28,7 @@
     <div id="welcome" name="welcome">
         <?php 
         
-            include 'welcome.php';
+            include 'bienvenue.php';
         ?>
     </div>
 
@@ -48,9 +48,10 @@
                     console.log(xhr.responseText);
                 }
             };
-            xhr.open('POST', '../Controller/msgcontroller.php?action=send', true);
+            xhr.open('POST', '../controller/msgcontroller.php?action=send', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.send("message="+message.value);
+            var msgValue = document.getElementById("message").value;
+            xhr.send("message=" + encodeURIComponent(msgValue));
             loadMessage();
         }
 
