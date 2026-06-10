@@ -1,6 +1,6 @@
 <?php
-include '../doa/msgdao.php';
-include '../Model/user.php';
+include '../dao/msgdao.php';
+include '../model/user.php';
 session_start();
 $action = $_GET['action'];
 

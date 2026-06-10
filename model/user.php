@@ -9,15 +9,16 @@ class User{
     private $website;
     private $description;
 
-    public function __construct($email,$password,$name,$birthday,$telephone,$visibility,$website,$description){
+    public function __construct($email,$password,$name,$birthday,$telephone,$visibility,$website,$description,$role = 'user'){
         $this->email=$email;
         $this->password=$password;
         $this->name=$name;
         $this->birthday=$birthday;
         $this->telephone=$telephone;
         $this->visibility = $visibility;
-            $this->website = $website;
-            $this->description = $description;
+        $this->website = $website;
+        $this->description = $description;
+        $this->role = $role;
     }
 
        public function setEmail($email){
@@ -75,6 +76,9 @@ class User{
         public function getDescription(){
             return $this->description;
         }
+        public function getRole() { 
+            return $this->role; }
+        public function setRole($role) { $this->role = $role; }
         
 
 }

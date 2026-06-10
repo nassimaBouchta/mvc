@@ -10,9 +10,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
+<div id="intro">
+	 you have an account: 
+		 "<a href='../mvc/view/login.html'>Login</a>";
+		 You don't have an account? create one now!
+</div>
+ 
+		
 <form name="testForm" id="testForm" method="post" action="controller/userController.php?action=insert">
 	<fieldset>
-		<legend>.:: Gestion de profil ::.</legend>
+		<legend> Gestion du compte</legend>
 		<p>
 			<label>
 				<input type="radio" name="visibility" value="1" checked> Visible pour tous</label>
@@ -61,6 +68,7 @@
 		</section>
 		<input type="submit" value="Valider">
 		<input type="reset" value="Réinitialiser">
+		
 
 	</fieldset>
 

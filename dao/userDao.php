@@ -14,7 +14,7 @@ class UserDao{
     }
 
     public function insertUser(User $user){
-        $stm = $this->dbh->prepare("INSERT INTO user VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stm = $this->dbh->prepare("INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
         
         $stm->bindValue(1, $user->getEmail());
         $stm->bindValue(2, $user->getPassword());
@@ -24,6 +24,7 @@ class UserDao{
         $stm->bindValue(6, $user->getVisibility());
         $stm->bindValue(7, $user->getWebsite());
         $stm->bindValue(8, $user->getDescription());
+        $stm->bindValue(9, $user->getRole());
         
         $stm->execute();
     }
@@ -40,7 +41,7 @@ class UserDao{
         $result = $stm->fetch(PDO::FETCH_ASSOC);
         $user = null;
         if(!empty($result)){
-            $user = new User($result['email'],$result['password'],$result['name'],$result['birthdate'],$result['telephone'],$result['visibility'],$result['website'],$result['description']);
+            $user = new User($result['email'],$result['password'],$result['name'],$result['birthdate'],$result['telephone'],$result['visibility'],$result['website'],$result['description'],$result['role'] );
            
         }
         return $user;

@@ -21,7 +21,7 @@ $desc=$_POST['description'];
             header('location:../index.html');
         }
         break;
-    case 'login':
+case 'login':
 
 $email=$_POST['email'];
 $pswd=$_POST['password'];
@@ -30,6 +30,7 @@ $user=$dao->loginUser($email,$pswd);
 if ($user != null){
     session_start();
     $_SESSION['user']=$user;
+    $_SESSION['role'] = $user->getRole();
     header('location: ../view/bienvenue.php');
         }else{
             echo "Login Failed!";
